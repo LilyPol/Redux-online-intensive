@@ -1,5 +1,5 @@
 // Types
-import { FETCH_POSTS_ASYNC, FILL_POSTS } from '/.types';
+import { FETCH_POSTS_ASYNC, FILL_POSTS } from './types';
 
 export const fillPosts = (posts) => {
     return {

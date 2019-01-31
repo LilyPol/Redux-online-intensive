@@ -6,6 +6,8 @@ import { FILL_POSTS } from './types';
 
 const initialState = List();
 
+const list1 = List();
+
 export const postsReducer = (state = initialState, action) => {
     switch (action.type) {
         case FILL_POSTS:
