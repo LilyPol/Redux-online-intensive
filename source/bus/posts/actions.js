@@ -5,29 +5,24 @@ import { types } from './types';
 import { api } from '../../REST';
 
 export const postsActions = {
-    fillPosts: (posts) => {
+    fillPosts: (posts) => {        
         return {
             type:    types.FILL_POSTS,
             payload: posts,
         };
     },    
-    createPost: (post) => {    
+    createPost: (post) => {            
         return {
             type:    types.CREATE_POST,
             payload: post,
         };
     },    
-    fetchPostsAsync: () => async (dispatch) => {
-        dispatch({
+    fetchPostsAsync: () => {        
+        return{
             type:    types.FETCH_POSTS_ASYNC,        
-        });
-    
-        const response = await api.posts.fetch();
-        const result = await response.json();
-    
-        dispatch(postsActions.fillPosts(result.data))
+        };
     },    
-    createPostAsync: (comment) => {    
+    createPostAsync: (comment) => {            
         return {
             type:    types.CREATE_POST_ASYNC,
             payload: comment,
