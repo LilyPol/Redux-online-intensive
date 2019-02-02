@@ -11,7 +11,7 @@ export const fillPosts = (posts) => {
     };
 };
 
-export const createPost = (post) => {
+export const createPost = (post) => {    
     return {
         type:   CREATE_POST,
         payload: post,
@@ -33,7 +33,7 @@ export const createPostAsync = (comment) => async (dispatch) => {
     dispatch({
         type:    CREATE_POST_ASYNC,
     });
-console.log(' -=-=createPostAsync=', comment)
+
     const response = await api.posts.create(comment);
     const result = await response.json();    
 
