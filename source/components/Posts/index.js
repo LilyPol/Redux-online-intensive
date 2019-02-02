@@ -38,14 +38,13 @@ export default class Posts extends Component {
     };
 
     componentDidMount () {
-        const { actions } = this.props;
-        console.log('-=-=-Did---', this.props)
+        const { actions } = this.props;        
         actions.fetchPostsAsync();        
     }
 
     render () {
         const { actions, posts, profile } = this.props;
-console.log('-=-=-post=', posts)
+
         const postsJSX = posts.map((post) => {
             return (
                 <Catcher key = { post.get('id') }>
