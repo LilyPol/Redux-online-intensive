@@ -11,11 +11,10 @@ export function* watchCreatePost () {
     yield takeEvery(types.CREATE_POST_ASYNC, createPost);
 }
 
-//--------------
 export function* watchFetchPost () {    
     yield takeEvery(types.FETCH_POSTS_ASYNC, fetchPost);
 }
-//--------------
+
 export function* watchPosts () {
     yield all([call(watchCreatePost), call(watchFetchPost)])    
 }
