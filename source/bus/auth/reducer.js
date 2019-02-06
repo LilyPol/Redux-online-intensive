@@ -10,8 +10,8 @@ const initialState = Map({
 
 export const authReducer = (state = initialState, action) => {
     switch (action.type) {
-        case types.AUTHENTICATE:
-            return state.set('isAuthnticated', true);
+        case types.AUTHENTICATE:        
+            return state.set('isAuthenticated', true);
 
         default:
             return state;

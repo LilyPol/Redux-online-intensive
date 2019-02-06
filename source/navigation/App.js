@@ -22,7 +22,6 @@ const mapStateToProps = (state) => {
 export default class App extends Component {
     render () {
         const { isAuthenticated } = this.props;
-
         return isAuthenticated ? (
             <Switch>                
                 <Route component = { Feed } path = { book.feed } />
