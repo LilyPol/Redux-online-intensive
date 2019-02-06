@@ -19,4 +19,3 @@ export function* watchPosts () {
     yield all([call(watchCreatePost), call(watchFetchPost)])    
 }
 
-//
