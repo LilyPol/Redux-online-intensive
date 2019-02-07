@@ -11,5 +11,5 @@ export const rootReducer = combineReducers({
     auth,    
     ui,
     posts,
-    profile,
+    profile,    
 });
