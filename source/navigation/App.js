@@ -38,8 +38,7 @@ export default class App extends Component {
 
         if (!isInitialized) {
             return <Loading />;
-        }
-        console.log('isAuthenticated=',isAuthenticated)
+        }        
         return isAuthenticated ? <Private /> : <Public />;
     }
 }
