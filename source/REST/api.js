@@ -59,7 +59,15 @@ export const api = {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ comment })                
-            }); 
+            });            
+        },
+        remove (id) {            
+            return fetch(`${MAIN_URL}/feed/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    Authorization: this.token,                    
+                },                
+            });             
         }
     },
 };

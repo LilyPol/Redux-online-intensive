@@ -12,7 +12,7 @@ export function* login ({ payload: credentials }) {
         yield put(uiActions.startFetching());                      
         
         const response = yield apply( api, api.auth.login, [credentials] );
-        const { data: profile, message } = yield apply(response, response.json);
+        const { data: profile, message } = yield apply(response, response.json);        
 
         if (response.status !== 200) {
             throw new Error(message);
