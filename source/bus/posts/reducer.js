@@ -18,21 +18,9 @@ export const postsReducer = (state = initialState, action) => {
             return state.clear();      
             
         case types.REMOVE_POST:                
-            /*for(var i = 0; i < state.length; i++) {
-                if(state[i].id === action.payload) {
-                    state.splice(state.indexOf(value), 1);                    
-                    break;
-                }
-            }*/
-          
-            /*let filtered = [];
-            for (let i = 0; i < state.length; i++) {
-              if (action.payload !== state.List[i].id)
-                filtered.push(state.List[i]);                
-            }
-            return filtered;*/
-
-            return state;
+            return state.filter((post) => {
+                 return post.get('id') !== action.payload;
+            });
 
         default:
             return state;
