@@ -69,7 +69,7 @@ export const api = {
                 },                
             });             
         },
-        like (postId) {            
+        like (postId) {             
             return fetch(`${MAIN_URL}/feed/like/${postId}`, {
                 method: 'PUT',
                 headers: {
@@ -79,7 +79,7 @@ export const api = {
         }
     },
     users: {
-        fetch () { 
+        fetch () {             
             return fetch(`${MAIN_URL}/user/all`, {
                 method: 'GET',
                 headers: {
