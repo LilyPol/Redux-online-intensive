@@ -13,9 +13,9 @@ export function* likePost ({ payload: postId }) {
         const response = yield apply( api, api.posts.like, [postId]);              
         
         if (response.status !== 204) {
-            const response = yield apply(api, api.posts.like, [postId]);
+            const { message } = yield apply(response, response.json);
 
-            throw new Error(response.message);
+            throw new Error(message);
         }
         
         const liker = yield select ((state) => {
