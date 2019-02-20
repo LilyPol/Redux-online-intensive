@@ -8,5 +8,5 @@ import { watchUsers } from '../bus/users/saga/watchers';
 import { watchProfile } from '../bus/profile/saga/watchers';
 
 export function* rootSaga () {
-    yield all([call(watchPosts), call(watchAuth), call(watchUsers), call(watchUsers)]);
+    yield all([call(watchPosts), call(watchAuth), call(watchUsers), call(watchProfile)]);
 }

@@ -1,9 +1,9 @@
-//Core./updateName
+//Core
 import { put, apply } from 'redux-saga/effects';
 
 // Instruments
 import { api } from '../../../../REST';
-import { postsActions } from '../../actions';
+import { uiActions } from '../../../ui/actions';
 import { profileActions } from '../../../profile/actions';
 
 export function* updateName ({ payload: {
