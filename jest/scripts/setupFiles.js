@@ -43,7 +43,8 @@ const fetchResponseSuccess = {
 };
 
 const fetchResponseSuccess204 = {
-    status: 204,    
+    status: 204,
+    json:   jest.fn(() => Promise.resolve(responseDataSuccess)),    
 };
 
 const fetchResponseFail401 = {

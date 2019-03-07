@@ -20,7 +20,7 @@ export function* logout () {
         const { data: profile, message } = yield apply(response, response.json);
 
         if (response.status !== 204) {
-            const { message } = yield apply(response,response.json);
+            const { message } = yield apply(response, response.json);
 
             throw new Error(message);
         }
