@@ -35,9 +35,7 @@ describe('logout saga:', () => {
         await expectSaga(logout)
             .put(uiActions.startFetching())
             .provide([[apply(api, api.auth.logout), __.fetchResponseFail400]])
-
             .put(uiActions.emitError(__.error, ' logout worker'))
-
             .apply(localStorage, localStorage.removeItem, ['token'])
             .apply(localStorage, localStorage.removeItem, ['remember'])            
             .put(profileActions.clearProfile())
